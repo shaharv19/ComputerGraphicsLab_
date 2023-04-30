@@ -5,21 +5,93 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638178527934076097
-    m_Hash: 2789957275
+      ticks: 638184744040365349
+    m_Hash: 2119569472
   m_LockFileStatus:
     m_FilePath: C:/Aiming high/ComputerGraphicsLab_/Aiming high Project/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638178528100630277
-    m_Hash: 1481530820
+      ticks: 638184744040455623
+    m_Hash: 2381487827
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
+    - packageId: com.ptc.vuforia.engine@file:C:\Aiming high\ComputerGraphicsLab_\Aiming
+        high Project\Packages\com.ptc.vuforia.engine-10.15.3.tgz
+      testable: 0
+      isDirectDependency: 1
+      version: 10.15.3
+      source: 6
+      resolvedPath: C:\Aiming high\ComputerGraphicsLab_\Aiming high Project\Library\PackageCache\com.ptc.vuforia.engine@53e25388be25
+      assetPath: Packages/com.ptc.vuforia.engine
+      name: com.ptc.vuforia.engine
+      displayName: Vuforia Engine AR
+      author:
+        name: PTC Inc.
+        email: 
+        url: https://developer.vuforia.com/
+      category: 
+      type: 
+      description: Vuforia Engine is the most widely used platform for AR development,
+        with support for leading phones, tablets, and eyewear. Developers can easily
+        add advanced computer vision functionality to Android, iOS, and UWP apps,
+        to create AR experiences that realistically interact with objects and the
+        environment.
+      status: 0
+      errors: []
+      versions:
+        all:
+        - 8.0.101
+        - 8.1.9
+        - 8.1.12
+        - 8.3.9
+        - 8.5.8
+        - 8.5.9
+        compatible: []
+        verified: 
+      dependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      keywords:
+      - vuforia
+      - engine
+      - ar
+      - xr
+      - augmented
+      - reality
+      - sdk
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+        configSource: 0
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.collab-proxy@2.0.1
       testable: 0
       isDirectDependency: 1
@@ -824,6 +896,7 @@ m_PackageAssets:
         - 1.6.2
         - 1.6.3
         - 1.6.4
+        - 1.6.5
         - 1.7.0-pre.1
         - 1.7.0-pre.2
         - 1.7.0
@@ -858,6 +931,7 @@ m_PackageAssets:
         - 1.6.2
         - 1.6.3
         - 1.6.4
+        - 1.6.5
         - 1.7.0-pre.1
         - 1.7.0-pre.2
         - 1.7.0
@@ -939,6 +1013,7 @@ m_PackageAssets:
       versions:
         all:
         - 1.0.0
+        - 3.0.0-exp.1
         compatible:
         - 1.0.0
         verified: 1.0.0
@@ -2820,6 +2895,20 @@ m_PackageAssets:
         revision: 29ea4d6504a5f58fb3a6934db839aa80ae6d9d88
         path: 
   m_LocalPackages:
-    m_LocalFileStatus: []
+    m_LocalFileStatus:
+    - m_FilePath: C:\Aiming high\ComputerGraphicsLab_\Aiming high Project\Packages\com.ptc.vuforia.engine-10.15.3.tgz/package.json
+      m_PathExists: 0
+      m_ContentTrackingEnabled: 1
+      m_ModificationDate:
+        serializedVersion: 2
+        ticks: 0
+      m_Hash: 0
+    - m_FilePath: C:\Aiming high\ComputerGraphicsLab_\Aiming high Project\Packages\com.ptc.vuforia.engine-10.15.3.tgz
+      m_PathExists: 1
+      m_ContentTrackingEnabled: 1
+      m_ModificationDate:
+        serializedVersion: 2
+        ticks: 638184698499486725
+      m_Hash: 1783302083
 m_ProjectPath: C:/Aiming high/ComputerGraphicsLab_/Aiming high Project/Packages
 m_EditorVersion: 2020.3.47f1 (5ef4f5b5e2d4)
