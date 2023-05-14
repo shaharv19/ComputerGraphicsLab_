@@ -7,5 +7,9 @@ overview:
 player view:
 <img width="1128" alt="playerView1" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/eb103f0d-9a3b-4c67-8b7c-4c97e5c0f922">
 
+https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/d9915c12-3b6c-4efb-aa8b-95088e8a8d19
+
+
+
 
 
