@@ -9,7 +9,7 @@ player view:
 
 https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/baf24726-067d-44aa-b917-2819f0ee1bb5
 
-week 4: importd and coded animation to the character and adjusting each animation: aim, shoot ,jump ,crouch(after long tests and trying to adjust i decided to not include movment animations because they distorted the game himself).<br />
+week 4: imported and coded animation to the character and adjusting each animation: aim, shoot ,jump ,crouch(after long tests and trying to adjust i decided to not include movment animations because they distorted the game himself).<br />
 
 
 
