@@ -6,6 +6,7 @@ TagManager:
   tags:
   - wall
   - cube
+  - terrain
   layers:
   - Default
   - TransparentFX

@@ -504,6 +504,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &620265933
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1898088551}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 62f2638661e0e28469bb73567ddddec5, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 62f2638661e0e28469bb73567ddddec5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 62f2638661e0e28469bb73567ddddec5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 62f2638661e0e28469bb73567ddddec5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 62f2638661e0e28469bb73567ddddec5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 62f2638661e0e28469bb73567ddddec5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 62f2638661e0e28469bb73567ddddec5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 62f2638661e0e28469bb73567ddddec5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 62f2638661e0e28469bb73567ddddec5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 62f2638661e0e28469bb73567ddddec5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 62f2638661e0e28469bb73567ddddec5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 62f2638661e0e28469bb73567ddddec5, type: 3}
+      propertyPath: m_Name
+      value: forward
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 62f2638661e0e28469bb73567ddddec5, type: 3}
 --- !u!1 &620400755
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,8 +651,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620400755}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -51.4, y: 12.63874, z: -3}
-  m_LocalScale: {x: 1, y: 50, z: 110}
+  m_LocalPosition: {x: -51, y: 12.63874, z: -3}
+  m_LocalScale: {x: 1, y: 50, z: 104}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -902,7 +959,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1898088551}
+  isAltPressed: 0
+  letsSee: 0.5
+  walkOffset: 0.3
   mouseSensivity: 100
+  frames: 1
+  setFrames: 100
+  yroatet: 0
+  controller: {fileID: 1898088549}
 --- !u!1001 &1056265491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -990,9 +1054,9 @@ TerrainCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184695411}
   m_Material: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: c0c094a7eeeab1b4b977f0c3fe7e1315, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1184695413
 Terrain:
   m_ObjectHideFlags: 0
@@ -1131,7 +1195,7 @@ Transform:
   m_GameObject: {fileID: 1190282673}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 12.63874, z: -52.5}
-  m_LocalScale: {x: 110, y: 50, z: 1}
+  m_LocalScale: {x: 102, y: 50, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -1372,7 +1436,7 @@ Transform:
   m_GameObject: {fileID: 1636818472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 49.6, y: 12.63874, z: -2}
-  m_LocalScale: {x: 1, y: 50, z: 105}
+  m_LocalScale: {x: 1, y: 50, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -1505,7 +1569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcd35b5515ca0ce4796b77f32cca796f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.6387415
+      value: 13.71874
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcd35b5515ca0ce4796b77f32cca796f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1803,16 +1867,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feeee7c24c26634468f7e75a38e2eb47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transform: {fileID: 1898088551}
+  IsRight: 0
   controller: {fileID: 1898088556}
   rb: {fileID: 1898088555}
   wall1: {fileID: 1636818477}
   wall2: {fileID: 2092912166}
   wall3: {fileID: 620400760}
+  IsForward: 0
   wall4: {fileID: 1190282678}
-  speed: 2
+  speed: 4
   move: {x: 0, y: 0}
-  gravity: -9.8
+  crouchHeight: 8
+  gravity_multiplier: 3
   jump_value: 10
+  rightClick: 0
 --- !u!114 &1898088550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1855,7 +1924,19 @@ MonoBehaviour:
     m_ActionId: 701b61ee-54ff-4f81-8e1c-499e1c5105da
     m_ActionName: player/move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1898088549}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: onShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 4ebfb1b1-4071-49cb-9466-c6e947b69719
     m_ActionName: player/shoot[/Mouse/leftButton]
   - m_PersistentCalls:
@@ -1867,7 +1948,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1898088549}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: onJump
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1878,6 +1959,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: df37fc04-1545-4805-b5f9-2bf8bf51b05f
     m_ActionName: player/jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1898088549}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: crouch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8ac7d7ef-edd8-4379-83d6-21463f1c9c33
+    m_ActionName: player/crouch[/Keyboard/tab]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: player
@@ -1898,7 +1995,7 @@ Animator:
   m_GameObject: {fileID: 1898088548}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c0ee999dd0ef11d4385bf2b0a7ea5fc7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2155,8 +2252,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092912161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 12.63874, z: 48.5}
-  m_LocalScale: {x: 110, y: 50, z: 1}
+  m_LocalPosition: {x: -1, y: 12.63874, z: 48}
+  m_LocalScale: {x: 103, y: 50, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
