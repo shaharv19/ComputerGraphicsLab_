@@ -11,7 +11,7 @@ https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/baf24726-067d
 
 week 4: imported and coded animation to the character and adjusting each animation: aim, shoot ,jump ,crouch(after long tests and trying to adjust i decided to not include movmeent animations because they distorted the game himself).<br />
 
-week 5: continued working on the arrow realising mechanics, and started working the AI funcunality.
+week 5: continued working on the arrow releasing mechanics, and started working the AI funcunality.
 
 
 
