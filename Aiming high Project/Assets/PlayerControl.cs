@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerControl : MonoBehaviour
 {
+    public GameObject arrowObject;
+    public Transform arrowPoint;
+    public bool isPullingString;
     private Animator animator;
   //  public GameObject arrawObject;
    // public Transform arrowPoint;
@@ -18,7 +21,7 @@ public class PlayerControl : MonoBehaviour
     public Rigidbody wall4;
     public int speed = 5;
     public Vector2 move;
-    private bool can_jump = false;
+    private bool can_jump = true;
     private bool is_jumping = false;
     private float currentY = 12.63874f;
     public float crouchHeight = 8.0f;
@@ -31,8 +34,41 @@ public class PlayerControl : MonoBehaviour
     public bool rightClick = false;
     private float _velocity = 0.0f;
     Vector3 _move;
+    public Bow bowScript;
+    public bool IsAiming=false;
 
-   // [SerializeField] cameraSet cameraA;
+    [SerializeField] CameraPlace cam;
+
+    public void PullStringg()
+    {
+        bowScript.PullString();
+        isPullingString = true;
+    }
+
+    public void Release()
+    {
+        bowScript.ReleaseString();
+    }
+
+    public void ArrowShot()
+    {
+        GameObject arrow = Instantiate(arrowObject, arrowPoint.position, transform.rotation);
+
+
+        Debug.Log("degreee" + cam.getX);
+
+            arrow.GetComponent<Rigidbody>().isKinematic = false;
+
+        arrow.GetComponent<Rigidbody>().velocity = (transform.up * -cam.getX/6+transform.forward*25);
+        isPullingString = false;
+           
+
+        
+    }
+
+
+
+    // [SerializeField] cameraSet cameraA;
 
     // Start is called before the first frame update
 
@@ -56,6 +92,8 @@ public class PlayerControl : MonoBehaviour
     }*/
 
 
+
+
     public void onMove(InputAction.CallbackContext context)
     {
         //Debug.Log("move");
@@ -77,7 +115,7 @@ public class PlayerControl : MonoBehaviour
         {
             //animator.SetBool("isMovingRight", true);
             IsRight = true;
-            Debug.Log("righhhht");
+            Debug.Log("sup");
         }
         else
         {
@@ -119,12 +157,14 @@ public class PlayerControl : MonoBehaviour
             is_jumping = false;
             //  Debug.Log("collide");
         }
+          Debug.Log("player colliding with:"+collision.gameObject.name); 
 
     }
     void OnCollisionExit(UnityEngine.Collision collision)
     {
         if (collision.gameObject.name == "Terrain")
         {
+            Debug.Log("exit");
             can_jump = false;
             is_jumping = true;
             animator.SetBool("jump", false);
@@ -135,6 +175,10 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(IsAiming==true)
+        {
+            animator.SetBool("rightMouseClick", true);
+        }
         if (Input.GetKeyDown("left shift"))
         {
             animator.SetBool("isCrouching", true);
@@ -157,7 +201,8 @@ public class PlayerControl : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && can_jump == true)
         {
-            _move.y = 22.5f;
+            Debug.Log("jump");
+            _move.y = 15f;
             is_jumping = true;
             animator.SetBool("jump", true);
         }
@@ -173,6 +218,16 @@ public class PlayerControl : MonoBehaviour
         wall3.isKinematic = true;
         wall4.isKinematic = true;
 
+//        _move.y = _move.y - 1.8f;
 
+    }
+    public void EnableArrow()
+    {
+        bowScript.PickArrow();
+    }
+
+    public void DisableArrow()
+    {
+        bowScript.DisableArrow();
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraPlace : MonoBehaviour
 {
     public Transform player;
+    public float getX;
 
     public bool isAltPressed = false;
     public CharacterController control;
@@ -39,6 +40,7 @@ public class CameraPlace : MonoBehaviour
         if (controller.rightClick == true)
         {
             xRoatation = Mathf.Clamp(xRoatation, -22.5f, 22.5f);
+            getX = xRoatation;
         }
         else
         {

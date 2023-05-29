@@ -4,37 +4,31 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-    public GameObject rb;
+    public Rigidbody rb;
+    private bool hasCollided = false; // Flag to track if the arrow has collided
+
+    private void OnCollisionEnter(Collision collision)
+    {
+       // Debug.Log("arrow colliding with" + collision.gameObject.name);
+        if(collision.gameObject.tag!="Player")
+        {
+         
+            rb.isKinematic = true;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Destroy(gameObject, 10);
     }
 
     // Update is called once per frame
-
-   public void OnCollisionEnter(Collision collision)
-    {
-       // if (collision.gameObject.tag == "character (3)")
-        //{
-         //   Debug.Log("here");
-         
-         Physics.IgnoreCollision(rb.GetComponent<Collider>(),GetComponent<Collider>(),true);
-
-         Debug.Log("hello");
-
-        // }
-        Debug.Log("coliision with arrow" + collision.gameObject.name);
-        
-
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-       // Debug.Log("coliision with arrow" + collision.gameObject.name);
-    }
     void Update()
     {
-       
+
     }
+
+
 }
+
