@@ -13,6 +13,11 @@ week 4: imported and coded animation to the character and adjusting each animati
 
 week 5: continued working on the arrow releasing mechanics, and started working the AI funcunality.
 
+week 6:still need to conduct research as i didnt complete the AI funcuanlity but made a progress, done with aim mechanic which include the string pulling and the arrow that goes back in correlation to the invest power.
+https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/d939b7cf-2e5b-44f5-b6e1-6eafab69a942
+
+
+
 
 
 
