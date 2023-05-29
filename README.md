@@ -11,7 +11,16 @@ https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/baf24726-067d
 
 week 4: imported and coded animation to the character and adjusting each animation: aim, shoot ,jump ,crouch(after long tests and trying to adjust i decided to not include movmeent animations because they distorted the game himself).<br />
 
-week 5: continued working on the arrow realising mechanics, and started working the AI funcunality.
+week 5: continued working on the arrow releasing mechanics, and started working the AI funcunality.
+
+week 6:still need to conduct research as i didnt complete the AI funcuanlity but made a progress, done with aim mechanic which include the string pulling and the arrow that goes back in correlation to the invest power.<br />
+
+https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/b00fcf29-bfa9-464e-b242-4cb801554a05
+
+
+
+
+
 
 
 
