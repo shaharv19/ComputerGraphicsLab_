@@ -33,7 +33,6 @@ public class Bow : MonoBehaviour
 
     public void PullString()
     {
-        Debug.Log("here");
         bowSettings.bowString.transform.position = bowSettings.stringHandPullPos.position;
         bowSettings.bowString.transform.parent = bowSettings.stringHandPullPos;
     }

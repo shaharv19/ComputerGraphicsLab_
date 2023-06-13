@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerControl : MonoBehaviour
 {
+    public GameObject bow;
     public GameObject arrowObject;
     public Transform arrowPoint;
     public bool isPullingString;
@@ -12,6 +13,7 @@ public class PlayerControl : MonoBehaviour
   //  public GameObject arrawObject;
    // public Transform arrowPoint;
     public bool IsRight = false;
+    Renderer renderer;
     public CharacterController controller;
     public Rigidbody rb;
     public Rigidbody wall1;
@@ -55,15 +57,13 @@ public class PlayerControl : MonoBehaviour
         GameObject arrow = Instantiate(arrowObject, arrowPoint.position, transform.rotation);
 
 
-        Debug.Log("degreee" + cam.getX);
+       // Debug.Log("degreee" + cam.getX);
 
-            arrow.GetComponent<Rigidbody>().isKinematic = false;
+        arrow.GetComponent<Rigidbody>().isKinematic = false;
 
         arrow.GetComponent<Rigidbody>().velocity = (transform.up * -cam.getX/6+transform.forward*25);
         isPullingString = false;
-           
-
-        
+            
     }
 
 
@@ -115,7 +115,7 @@ public class PlayerControl : MonoBehaviour
         {
             //animator.SetBool("isMovingRight", true);
             IsRight = true;
-            Debug.Log("sup");
+           // Debug.Log("sup");
         }
         else
         {
@@ -147,12 +147,15 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+       
+
     }
 
     void OnCollisionEnter(UnityEngine.Collision collision)
     {
         if (collision.gameObject.name == "Terrain")
         {
+            Debug.Log("collsion traaaaing");
             can_jump = true;
             is_jumping = false;
             //  Debug.Log("collide");
@@ -160,11 +163,12 @@ public class PlayerControl : MonoBehaviour
           Debug.Log("player colliding with:"+collision.gameObject.name); 
 
     }
+
     void OnCollisionExit(UnityEngine.Collision collision)
     {
         if (collision.gameObject.name == "Terrain")
         {
-            Debug.Log("exit");
+            //Debug.Log("exit");
             can_jump = false;
             is_jumping = true;
             animator.SetBool("jump", false);
@@ -182,10 +186,14 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKeyDown("left shift"))
         {
             animator.SetBool("isCrouching", true);
+            Debug.Log("crouchh");
+            bow.SetActive(false);
+            
         }
         if (Input.GetKeyUp("left shift"))
         {
             animator.SetBool("isCrouching", false);
+            bow.SetActive(true);
 
         }
         if (Input.GetMouseButtonDown(0))
@@ -230,4 +238,6 @@ public class PlayerControl : MonoBehaviour
     {
         bowScript.DisableArrow();
     }
+
+   
 }

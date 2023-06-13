@@ -9,7 +9,7 @@ public class Arrow : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-       // Debug.Log("arrow colliding with" + collision.gameObject.name);
+        Debug.Log("arrow colliding with" + collision.gameObject.name);
         if(collision.gameObject.tag!="Player")
         {
          

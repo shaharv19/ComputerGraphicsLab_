@@ -37,7 +37,6 @@ public class HandBowMovment : MonoBehaviour
 
              // Perform interpolation to rotate the hand gradually
              transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotationHand, rotationSpeed * Time.deltaTime);*/
-            Debug.Log("in");
             float cameraRotationX = _cam.getX;
 
             // Calculate the target rotation for the hand
