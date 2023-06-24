@@ -24,7 +24,7 @@ week 8:done with the Ai functions, including avoiding obstacles, following the p
 <img width="621" alt="MainMenu" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/83b77137-d48f-4057-9cb7-faf0d2baa58a">
 <img width="621" alt="difficultyAndVolume" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/2587df56-95a2-4d36-a067-9943e6020439">
 
-week 9: encountered with some bugs in the diffrent colliders, fixed them and start working and the game managament.
+week 9: encountered with some bugs in the different colliders, fixed them and start working and the game management.
 
 
 
