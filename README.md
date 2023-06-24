@@ -17,6 +17,13 @@ week 6:still need to conduct research as i didnt complete the AI funcuanlity but
 
 https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/b00fcf29-bfa9-464e-b242-4cb801554a05
 
+week 7:Miloim.
+
+week 8:done with the Ai functions, including avoiding obstacles, following the player and shooting arrows on him, the accuracy of the arrows depends on the difficulty of the Ai(Easy-in probability of 1 to 8 the arrow will be accurate .Medium-in probability of 1 to 5 the arrow will be accurate Hard-in probability of 1 to 3 the arrow will be accurate). +made 2 new scenes one for main menu and one for options to pick the level.if the player didnt choose any level the defualt level will be Easy.
+
+<img width="621" alt="MainMenu" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/83b77137-d48f-4057-9cb7-faf0d2baa58a">
+<img width="621" alt="difficultyAndVolume" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/2587df56-95a2-4d36-a067-9943e6020439">
+
 
 
 
