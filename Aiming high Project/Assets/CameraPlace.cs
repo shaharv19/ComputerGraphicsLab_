@@ -53,7 +53,7 @@ public class CameraPlace : MonoBehaviour
             if (Input.GetKeyDown("left shift"))
             {
                 transform.position = transform.position + new Vector3(0, -1.0f, 0.2f);
-                Debug.Log("shift");
+               // Debug.Log("shift");
                 isAltPressed = true;
             }
             count = 0;
@@ -65,7 +65,7 @@ public class CameraPlace : MonoBehaviour
             {
                 // controller.height = currentY;
                 transform.position = transform.position + new Vector3(0, 1.0f, -0.2f);
-                Debug.Log("shift realsised");
+               // Debug.Log("shift realsised");
                 isAltPressed = false;
             }
             count = 1;

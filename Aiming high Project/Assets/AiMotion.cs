@@ -25,15 +25,15 @@ public class AiMotion : MonoBehaviour
     public int counter = 0;
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
+        /*agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();*/
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(player.position);
+        /*transform.LookAt(player.position);
         if (agent.enabled )//&& agent.isOnNavMesh)
         {
             agent.destination = player.position;

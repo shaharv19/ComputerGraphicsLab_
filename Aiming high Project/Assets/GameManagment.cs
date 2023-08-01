@@ -13,6 +13,6 @@ public class GameManagment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("IM IN MANAGMENT");
+       // Debug.Log("IM IN MANAGMENT");
     }
 }

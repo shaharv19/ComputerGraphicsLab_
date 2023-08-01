@@ -8,7 +8,7 @@ public class PlayerControl : MonoBehaviour
     public GameObject bow;
     public GameObject arrowObject;
     public Transform arrowPoint;
-    public bool isPullingString;
+    public bool isPullingString = false;
     private Animator animator;
   //  public GameObject arrawObject;
    // public Transform arrowPoint;
@@ -16,6 +16,8 @@ public class PlayerControl : MonoBehaviour
     Renderer renderer;
     public CharacterController controller;
     public Rigidbody rb;
+    public Transform _bow;
+    public Transform bowTip;
     public Rigidbody wall1;
     public Rigidbody wall2;
     public Rigidbody wall3;
@@ -31,6 +33,7 @@ public class PlayerControl : MonoBehaviour
     private bool leftMouseTrigged = false;
     private bool leftMouseReleased = true;
     private Vector3 jump;
+    float elapsedTime;
     private Vector3 _gravity;
     public float jump_value = 10f;
     public bool rightClick = false;
@@ -38,18 +41,27 @@ public class PlayerControl : MonoBehaviour
     Vector3 _move;
     public Bow bowScript;
     public bool IsAiming=false;
+    public float startTime = 0;
+    public float pressTime = 0;
+    public int check = 0;
+    public float ArrowTrajectory;
 
     [SerializeField] CameraPlace cam;
 
     public void PullStringg()
     {
+        Debug.Log("pulling string");
+        startTime = Time.time;
         bowScript.PullString();
         isPullingString = true;
     }
 
     public void Release()
     {
+        Debug.Log("realising string");
         bowScript.ReleaseString();
+        isPullingString = false;
+        check = 1;
     }
 
     public void ArrowShot()
@@ -60,36 +72,27 @@ public class PlayerControl : MonoBehaviour
        // Debug.Log("degreee" + cam.getX);
 
         arrow.GetComponent<Rigidbody>().isKinematic = false;
+        //arrow.GetComponent<Rigidbody>().velocity = (transform.up * -cam.getX / 6 + transform.forward * 5);
+        Debug.Log("press log is:" + pressTime);
+        /*  if (pressTime < 2)
+          {
+              arrow.GetComponent<Rigidbody>().AddForce(transform.up * -cam.getX * 20, ForceMode.Acceleration);
+              arrow.GetComponent<Rigidbody>().velocity = transform.forward * 20*(pressTime-0.2f);//pressTime*30;
+          }
+          else
+          {
+              arrow.GetComponent<Rigidbody>().velocity = transform.up*-cam.getX/6+transform.forward * 13 * pressTime;
+              arrow.GetComponent<Rigidbody>().useGravity = false;
 
-        arrow.GetComponent<Rigidbody>().velocity = (transform.up * -cam.getX/6+transform.forward*25);
-        isPullingString = false;
-            
-    }
+          }*/
 
-
-
-    // [SerializeField] cameraSet cameraA;
-
-    // Start is called before the first frame update
-
-    /*public void ThrowArrow()
-    {
-        Debug.Log(" jkdfjkdjskarraw");
-        GameObject arrow = Instantiate(arrawObject, arrowPoint.position + new Vector3(0f, 0f, 0f), transform.rotation);
-         Vector2 vec = new Vector2(0, 1);
-          arrow.GetComponent<Rigidbody>().AddForce(transform.forward * 30f/*transform.up*10f*-cameraA.xRoatation, ForceMode.Impulse);
+        arrow.GetComponent<Rigidbody>().AddForce(transform.up * -cam.getX * 20, ForceMode.Acceleration);
+        arrow.GetComponent<Rigidbody>().velocity = transform.forward * 20 * (pressTime - 0.2f);//pressTime*30;
 
 
 
     }
 
-    public void ThrowArr()
-    {
-        Debug.Log("throw arraw");
-        GameObject arrow = Instantiate(arrawObject, arrowPoint.position, transform.rotation);
-        // Vector2 vec = new Vector2(0, 1);
-        //   arrow.GetComponent<Rigidbody>().AddForce(transform.forward * -1f/*transform.up*10f*-cameraA.xRoatation, ForceMode.Impulse);
-    }*/
 
 
 
@@ -98,8 +101,6 @@ public class PlayerControl : MonoBehaviour
     {
         //Debug.Log("move");
         move = context.ReadValue<Vector2>();
-        // Debug.Log("right equal to:" + move.x);
-        // Debug.Log("fowrward to:" + move.y);
         if (move.y == 1)
         {
             // animator.SetBool("isMovingForward", true);
@@ -155,12 +156,12 @@ public class PlayerControl : MonoBehaviour
     {
         if (collision.gameObject.name == "Terrain")
         {
-            Debug.Log("collsion traaaaing");
+           // Debug.Log("collsion traaaaing");
             can_jump = true;
             is_jumping = false;
             //  Debug.Log("collide");
         }
-          Debug.Log("player colliding with:"+collision.gameObject.name); 
+         // Debug.Log("player colliding with:"+collision.gameObject.name); 
 
     }
 
@@ -179,7 +180,8 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(IsAiming==true)
+
+        if (IsAiming==true)
         {
             animator.SetBool("rightMouseClick", true);
         }
@@ -226,7 +228,14 @@ public class PlayerControl : MonoBehaviour
         wall3.isKinematic = true;
         wall4.isKinematic = true;
 
-//        _move.y = _move.y - 1.8f;
+        //        _move.y = _move.y - 1.8f;
+        if (isPullingString == false && check == 1)
+        {
+            pressTime = Time.time - startTime;
+            check = 0;
+        }
+
+
 
     }
     public void EnableArrow()
