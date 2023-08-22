@@ -35,7 +35,7 @@ resolving mechanics
 
 week 10(16.08):completed and improved arrow mechanics.
 
-week 11:finihed and built all game managment and expirience for user including: music,menues,scores,Ai
+week 11:finished and built all game managment and expirience for user including: music,menues,scores,Ai
 
 
 
