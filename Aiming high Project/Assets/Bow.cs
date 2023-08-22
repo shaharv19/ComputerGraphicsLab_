@@ -33,12 +33,15 @@ public class Bow : MonoBehaviour
 
     public void PullString()
     {
+        Debug.Log("im there nowww");
+
         bowSettings.bowString.transform.position = bowSettings.stringHandPullPos.position;
         bowSettings.bowString.transform.parent = bowSettings.stringHandPullPos;
     }
 
     public void ReleaseString()
     {
+        Debug.Log("im here nowww");
         bowSettings.bowString.transform.position = bowSettings.stringInitialPos.position;
         bowSettings.bowString.transform.parent = bowSettings.stringInitialParent;
     }
@@ -58,17 +61,7 @@ public class Bow : MonoBehaviour
 
     void Start()
     {
-       /* pos = bowString.position;
-        if (player.rightClick == true)
-        {
-            pos.y = pos.y + 1;
-
-        }
-        transform.position = pos;*/
-
     }
-
-    // Update is called once per frame
     void Update()
     {
         

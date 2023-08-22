@@ -6,7 +6,6 @@ public class CameraPlace : MonoBehaviour
 {
     public Transform player;
     public float getX;
-
     public bool isAltPressed = false;
     public CharacterController control;
     private bool wasMoving = false;
@@ -39,7 +38,7 @@ public class CameraPlace : MonoBehaviour
         xRoatation -= mouseY;
         if (controller.rightClick == true)
         {
-            xRoatation = Mathf.Clamp(xRoatation, -22.5f, 22.5f);
+            xRoatation = Mathf.Clamp(xRoatation, -16f, 16f);
             getX = xRoatation;
         }
         else
@@ -70,40 +69,8 @@ public class CameraPlace : MonoBehaviour
             }
             count = 1;
         }
-
-
-        /*  if (controller.IsForward==true && countA==1)
-          {
-            control.Move(new Vector3(0, 0,-5));
-            //transform.position= transform.position + new Vector3(0,0, walkOffset);
-            Debug.Log("here");
-            countA = 0;
-        }
-
-          else if (controller.IsForward == false && countA == 0)
-          {
-            control.Move(new Vector3(0,0,5));
-            //transform.position = transform.position + new Vector3(0, 0, -walkOffset);
-            countA = 1;
-              Debug.Log("here2");
-          }
-          /*
-        if (controller.IsRight == true && countB== 1)
-        {
-            transform.position = transform.position + new Vector3(walkOffset+0.08f, 0, walkOffset/2+0.08f);
-            countB = 0;
-            Debug.Log("here");
-        }
-
-        else if (controller.IsRight == false && countB == 0)
-        {
-            transform.position = transform.position + new Vector3(-walkOffset - 0.08f, 0, -walkOffset / 2 - 0.08f);
-            countB = 1;
-            Debug.Log("here2");
-        }
-         */
-
-
     }
+
 }
+
 

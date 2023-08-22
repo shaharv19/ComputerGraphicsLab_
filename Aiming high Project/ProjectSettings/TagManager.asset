@@ -9,6 +9,7 @@ TagManager:
   - terrain
   - bow
   - arrow
+  - target
   layers:
   - Default
   - TransparentFX
@@ -18,9 +19,9 @@ TagManager:
   - UI
   - player
   - myArrow
-  - 
-  - 
-  - 
+  - AiArrow
+  - wall
+  - enemy
   - 
   - 
   - 

@@ -45,19 +45,27 @@ public class PlayerControl : MonoBehaviour
     public float pressTime = 0;
     public int check = 0;
     public float ArrowTrajectory;
+    public Transform left;
+    public float speedArrow = 30;
+
 
     [SerializeField] CameraPlace cam;
 
     public void PullStringg()
     {
+        left.localRotation = Quaternion.Euler(cam.xRoatation, 0f, 0f);
         Debug.Log("pulling string");
         startTime = Time.time;
         bowScript.PullString();
         isPullingString = true;
+        FindObjectOfType<AudioManagerMain>().Play("pull");
+
     }
 
     public void Release()
     {
+        FindObjectOfType<AudioManagerMain>().Stop("pull");
+        FindObjectOfType<AudioManagerMain>().PlayOneTime("release");
         Debug.Log("realising string");
         bowScript.ReleaseString();
         isPullingString = false;
@@ -73,25 +81,25 @@ public class PlayerControl : MonoBehaviour
 
         arrow.GetComponent<Rigidbody>().isKinematic = false;
         //arrow.GetComponent<Rigidbody>().velocity = (transform.up * -cam.getX / 6 + transform.forward * 5);
-        Debug.Log("press log is:" + pressTime);
-        /*  if (pressTime < 2)
-          {
-              arrow.GetComponent<Rigidbody>().AddForce(transform.up * -cam.getX * 20, ForceMode.Acceleration);
-              arrow.GetComponent<Rigidbody>().velocity = transform.forward * 20*(pressTime-0.2f);//pressTime*30;
-          }
-          else
-          {
-              arrow.GetComponent<Rigidbody>().velocity = transform.up*-cam.getX/6+transform.forward * 13 * pressTime;
-              arrow.GetComponent<Rigidbody>().useGravity = false;
+       // if (pressTime < 2)
+        //{
+            // arrow.GetComponent<Rigidbody>().AddForce(transform.up * -cam.getX * speedArrow, ForceMode.Acceleration);
+            // arrow.GetComponent<Rigidbody>().velocity = transform.forward * speedArrow * (pressTime - 0.2f);//pressTime*30;
 
-          }*/
+            arrow.GetComponent<Rigidbody>().AddForce(transform.up * -cam.getX * 50, ForceMode.Acceleration);
+            arrow.GetComponent<Rigidbody>().velocity = transform.forward * speedArrow * (pressTime - 0.2f)*pressTime;//pressTime*30;
+        //}
+        //else
+       // {
+       //     arrow.GetComponent<Rigidbody>().velocity = transform.up * -cam.getX / 6 + transform.forward * 13 * pressTime;
+       //     arrow.GetComponent<Rigidbody>().useGravity = false;
 
-        arrow.GetComponent<Rigidbody>().AddForce(transform.up * -cam.getX * 20, ForceMode.Acceleration);
-        arrow.GetComponent<Rigidbody>().velocity = transform.forward * 20 * (pressTime - 0.2f);//pressTime*30;
-
-
-
+      //  }
     }
+
+
+
+
 
 
 
@@ -101,44 +109,14 @@ public class PlayerControl : MonoBehaviour
     {
         //Debug.Log("move");
         move = context.ReadValue<Vector2>();
-        if (move.y == 1)
+       /* if (move.y == 1)
         {
             // animator.SetBool("isMovingForward", true);
             IsForward = true;
             rb.AddForce(transform.forward * 2);
-        }
-        else
-        {
-            // animator.SetBool("isMovingForward", false);
-            IsForward = false;
-        }
-        if (move.x == 1)
-        {
-            //animator.SetBool("isMovingRight", true);
-            IsRight = true;
-           // Debug.Log("sup");
-        }
-        else
-        {
-            //animator.SetBool("isMovingRight", false);
-            IsRight = false;
-        }
+        }*/
 
-        /*  if (move.x == 1)
-          {
-              animator.SetBool("isMovingRight", false);
-              IsRight = false;
-          }
-
-          if(move.x==-1)
-          {
-              animator.SetBool("isMovingLeft", true);
-          }
-          else
-          {
-              animator.SetBool("isMovingLeft", false) ;
-          }*/
-        _move = transform.right * move.x + transform.forward * move.y;
+        _move = transform.right * move.x*10 + transform.forward * move.y*10;
     }
 
     public void crouch()
@@ -148,8 +126,35 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-       
+        //FreezeRotation();
 
+
+    }
+
+    private void FreezeRotation()
+    {
+        // Get the current rotation of the object
+        Quaternion currentRotation = transform.rotation;
+
+        // Zero out the rotation along the specified axes
+        currentRotation = FreezeRotationAlongAxes(currentRotation, true, false, true);
+
+        // Set the modified rotation back to the object
+        transform.rotation = currentRotation;
+    }
+
+    private Quaternion FreezeRotationAlongAxes(Quaternion rotation, bool freezeX, bool freezeY, bool freezeZ)
+    {
+        Vector3 eulerRotation = rotation.eulerAngles;
+
+        if (freezeX)
+            eulerRotation.x = 0f;
+        if (freezeY)
+            eulerRotation.y = 0f;
+        if (freezeZ)
+            eulerRotation.z = 0f;
+
+        return Quaternion.Euler(eulerRotation);
     }
 
     void OnCollisionEnter(UnityEngine.Collision collision)
@@ -188,7 +193,6 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKeyDown("left shift"))
         {
             animator.SetBool("isCrouching", true);
-            Debug.Log("crouchh");
             bow.SetActive(false);
             
         }
@@ -222,7 +226,7 @@ public class PlayerControl : MonoBehaviour
             _move.y = _move.y - 1.8f;
         }
 
-        rb.freezeRotation = true;
+       // rb.freezeRotation = false;
         wall1.isKinematic = true;
         wall2.isKinematic = true;
         wall3.isKinematic = true;

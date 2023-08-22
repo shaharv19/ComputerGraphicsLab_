@@ -8,6 +8,7 @@ public class Main_manu : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //FindObjectOfType<AudioManagerMainMenu>().Stop("main");
     }
 
     public void Quit()
@@ -19,6 +20,10 @@ public class Main_manu : MonoBehaviour
     public void Options()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+       
     }
+
+
+
 
 }
