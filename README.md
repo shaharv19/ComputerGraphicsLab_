@@ -21,7 +21,7 @@ left mouse click(while arrow being loading)-releases the arrow
 
 ### points and winning
 If the arrow hits an enemy, the player **receives 20** points. if it hits a target, the player **receives 10** points. However, 
-each hit from the enemy on the player results in a **loss of 50** points The precision of the Ai depends on the level defined in the secondary menu.
+each hit from the enemy in the player results in a **loss of 50** points The precision of the Ai depends on the level defined in the secondary menu.
 The game ends with the player's victory when they reach a total of **700 points**.
 
 ## Game menues
@@ -30,23 +30,23 @@ Main menu:
 
 The main menu is divided into three parts:  
 start- for starting the game  
-options- for secondery menu  
-exit- quit the game.  
+options- for secondary menu  
+exit- quits the game.  
 
 
-Secondery menu:  
+Secondary menu:  
 <img width="647" alt="secondery menu" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/874c1281-b900-4569-b370-62942843658a">
 
 (1) 3 buttons to determine the current difficulty of the Ai:  
-easy- The enemy will launch an accurate arrow towards the player with probability of 1 to 3.  
+easy- The enemy will launch an accurate arrow towards the player with probability of 1 to 7.  
 medium- The enemy will launch an accurate arrow towards the player with probability of 1 to 5.  
-hard- The enemy will launch an accurate arrow towards the player with probability of 1 to 7.  
+hard- The enemy will launch an accurate arrow towards the player with probability of 1 to 3.  
 
 **by default the current difficulty setted to easy.**
 
 (2) volume slider to determime game music volume and bow and arrow affects sounds.
 
-(3) back button the back to the Main menu.
+(3) back button- the go back to the Main menu.
 
 
 ## Installation
