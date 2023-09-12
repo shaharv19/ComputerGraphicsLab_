@@ -1,6 +1,6 @@
 # Aiming high-Bow and Arrow game
 
-## Summery
+## Summary
 
 The game tries to simulate and replicate the operation of shooting a bow and arrow against the Ai,
 The game aims to provide an authentic experience, for the player, starting from loading the arrow, bending the string, and shooting.
