@@ -1,41 +1,99 @@
-# ComputerGraphicsLab_
-week 1: setting up the environment and reading about unity and its functionality.<br />
-week 2: building the game environment including constructing game arena, adding players,tactical objects and targets.<br />
-week 3: handled with character movment and jump,imported botw and arrow, set the camera position and handaled with collisions.<br />
-overview:
-<img width="1128" alt="overview1" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/249b8d0f-4f23-4d2b-8107-903e458a28ba">
-player view:
-<img width="1128" alt="playerView1" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/eb103f0d-9a3b-4c67-8b7c-4c97e5c0f922">
+# Aiming high-Bow and Arrow game
 
-https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/baf24726-067d-44aa-b917-2819f0ee1bb5
+## Summery
 
-week 4: imported and coded animation to the character and adjusting each animation: aim, shoot ,jump ,crouch(after long tests and trying to adjust i decided to not include movmeent animations because they distorted the game himself).<br />
+The game tries to simulate and replicate the operation of shooting a bow and arrow against the Ai,
+The game aims to provide an authentic experience, for the player, starting from loading the arrow, bending the string, and shooting.
+Additionally, in the game, there are critical decisions to make, whether to try to hit the targets to score additional points or to try to hit the enemy.
 
-week 5: continued working on the arrow releasing mechanics, and started working the AI funcunality.
+## How to play
 
-week 6:still need to conduct research as i didnt complete the AI funcuanlity but made a progress, done with aim mechanic which include the string pulling and the arrow that goes back in correlation to the invest power.<br />
+### controls
 
-https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/b00fcf29-bfa9-464e-b242-4cb801554a05
+w-forward  
+s-backwards  
+d-right  
+a-left  
+shift key-crouch  
+space-jump  
+left mouse click-loading the arrow into the bow  
+left mouse click(while arrow being loading)-releases the arrow  
 
-week 7:Miloim.
+### points and winning
+If the arrow hits an enemy, the player **receives 20** points. if it hits a target, the player **receives 10** points. However, 
+each hit from the enemy on the player results in a **loss of 50** points The precision of the Ai depends on the level defined in the secondary menu.
+The game ends with the player's victory when they reach a total of **700 points**.
 
-week 8:done with the Ai functions, including avoiding obstacles, following the player and shooting arrows on him, the accuracy of the arrows depends on the difficulty of the Ai(Easy-in probability of 1 to 8 the arrow will be accurate .Medium-in probability of 1 to 5 the arrow will be accurate Hard-in probability of 1 to 3 the arrow will be accurate). +made 2 new scenes one for main menu and one for options to pick the level.if the player didnt choose any level the defualt level will be Easy.
+## Game menues
+Main menu:  
+<img width="648" alt="main menu" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/fc8f8f25-8df1-42f6-8f91-fbc75478187c">
 
-<img width="621" alt="MainMenu" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/83b77137-d48f-4057-9cb7-faf0d2baa58a">
-<img width="621" alt="difficultyAndVolume" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/2587df56-95a2-4d36-a067-9943e6020439">
-
-week 9: encountered some bugs in the different colliders, fixed them, and start working and the game management.
-
----------------------------------------------------
-
-resolving mechanics
-
----------------------------------------------------
+The main menu is divided into three parts:  
+start- for starting the game  
+options- for secondery menu  
+exit- quit the game.  
 
 
-week 10(16.08):completed and improved arrow mechanics.
+Secondery menu:  
+<img width="647" alt="secondery menu" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/874c1281-b900-4569-b370-62942843658a">
 
-week 11:finished and built all game managment and experience for user including: music,menues,scores,Ai
+(1) 3 buttons to determine the current difficulty of the Ai:  
+easy- The enemy will launch an accurate arrow towards the player with probability of 1 to 3.  
+medium- The enemy will launch an accurate arrow towards the player with probability of 1 to 5.  
+hard- The enemy will launch an accurate arrow towards the player with probability of 1 to 7.  
+
+**by default the current difficulty setted to easy.**
+
+(2) volume slider to determime game music volume and bow and arrow affects sounds.
+
+(3) back button the back to the Main menu.
+
+
+## Installation
+
+To run this application, download the GitHub zip file from the realeses ,unzip the file and open the extracted file using unity hub.
+
+## Game images
+
+Arena:  
+<img width="647" alt="game arena" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/14e516e9-e09f-4a4f-8499-88687a2f7745">
+
+Player view:  
+<img width="646" alt="player view" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/2cc65177-2d93-42f1-a3de-186e8552e242">
+
+Player:  
+<img width="413" alt="player imageee" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/97352111-b2ee-4e96-ab0e-171175e7caba">
+
+Enemy:  
+<img width="517" alt="enemy" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/de71e7ab-f543-4a16-b8d6-6f9ac0f0476f">
+
+Target:  
+<img width="351" alt="targettt" src="https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/e8db14e9-bac7-410b-a41e-15b4c3e5933d">
+
+## demonstration video
+https://github.com/shaharv19/ComputerGraphicsLab_/assets/102164870/58f61170-98c8-49ae-82ca-73eb18c628e4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ד
+
+
+
+
+
 
 
 
