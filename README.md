@@ -20,6 +20,7 @@ left mouse click-loading the arrow into the bow
 left mouse click(while arrow being loading)-releases the arrow  
 
 ### points and winning
+Player's main objective is to hit his targets and avoid from get hit by the emnemy.
 If the arrow hits an enemy, the player **receives 20** points. if it hits a target, the player **receives 10** points. However, 
 each hit from the enemy in the player results in a **loss of 50** points The precision of the Ai depends on the level defined in the secondary menu.
 The game ends with the player's victory when they reach a total of **700 points**.
